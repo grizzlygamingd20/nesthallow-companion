@@ -32,6 +32,8 @@ jobs:
           KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
+          echo "KEYSTORE_B64 present: $([ -n "$KEYSTORE_B64" ] && echo yes || echo NO) (${#KEYSTORE_B64} characters)"
+          echo "KEYSTORE_PASSWORD present: $([ -n "$KEYSTORE_PASSWORD" ] && echo yes || echo NO)"
           if [ -n "$KEYSTORE_B64" ] && [ -n "$KEYSTORE_PASSWORD" ]; then
             echo "$KEYSTORE_B64" | tr -d ' \n\r' | base64 -d > "$RUNNER_TEMP/keeper.jks"
             {
@@ -42,7 +44,7 @@ jobs:
             } >> "$GITHUB_ENV"
             echo "signed=true" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::Signing secrets not set yet. Building unsigned to check the code; no APK will be published."
+            echo "::warning::Signing secrets incomplete (see the two lines above). Building unsigned to check the code; no APK will be published."
             echo "signed=false" >> "$GITHUB_OUTPUT"
           fi
 
