@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A small moth: four wings, a body and two antennae. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#8FB996" android:pathData="M54,50 C40,30 22,30 24,46 C26,58 42,58 54,54 Z" />
+    <path android:fillColor="#8FB996" android:pathData="M54,50 C68,30 86,30 84,46 C82,58 66,58 54,54 Z" />
+    <path android:fillColor="#5E8C6A" android:pathData="M54,56 C42,60 32,72 40,76 C48,80 52,68 54,60 Z" />
+    <path android:fillColor="#5E8C6A" android:pathData="M54,56 C66,60 76,72 68,76 C60,80 56,68 54,60 Z" />
+    <path android:fillColor="#7A4B2A" android:pathData="M50,48 a4,4 0 0,1 8,0 v20 a4,4 0 0,1 -8,0 Z" />
+    <path android:strokeColor="#C9A94E" android:strokeWidth="1.6" android:fillColor="#00000000"
+        android:pathData="M52,46 C50,38 46,34 42,34 M56,46 C58,38 62,34 66,34" />
+    <path android:fillColor="#F5E9C9" android:pathData="M48,46 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z" />
+</vector>

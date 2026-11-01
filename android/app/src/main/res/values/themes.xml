@@ -1,0 +1,9 @@
+<resources>
+    <color name="grove_night">#0F1A14</color>
+    <color name="icon_bg">#1E3326</color>
+    <style name="Theme.Nesthallow" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/grove_night</item>
+        <item name="android:statusBarColor">@color/grove_night</item>
+        <item name="android:navigationBarColor">@color/grove_night</item>
+    </style>
+</resources>
