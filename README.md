@@ -61,4 +61,9 @@ Every push to `main` builds a new signed APK as a new release. Install it over t
 
 ## Signing key
 
-The release signing key lives in this repo's Actions secrets (`KEYSTORE_B64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, `KEY_PASSWORD`). Keep the backup copy Birch sent you somewhere safe. Android only installs updates signed with the same key.
+The release signing key lives in two Actions secrets, under **Settings → Secrets and variables → Actions**:
+
+- `KEYSTORE_B64`: the base64 text of the key file
+- `KEYSTORE_PASSWORD`: its password
+
+Without them, builds still compile the code but don't publish an APK. Keep the backup copy Birch sent you somewhere safe. Android only installs updates signed with the same key, so losing it means uninstalling and reinstalling the app.
