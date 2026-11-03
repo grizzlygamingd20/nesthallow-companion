@@ -1,0 +1,81 @@
+/* Grove Naturalist: a living naturalist's notebook.
+   Palette shared with the companion app's moth (NesthallowFace.kt).
+   Parchment is the page; text stays dark ink so it reads outdoors. */
+:root {
+  --parchment: #f5e9c9;
+  --parchment-deep: #eadbb2;
+  --ink: #2b1d14;
+  --ink-soft: #5a4636;
+  --walnut: #7a4b2a;
+  --forest: #3f6b4c;
+  --moss: #5e8c6a;
+  --brass: #c9a94e;
+  --danger: #8f2d1f;
+  --radius: 10px;
+  --tap: 48px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--forest); }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+h1, h2 { color: var(--walnut); line-height: 1.2; }
+h1 { font-size: 1.9rem; margin: 0 0 4px; }
+
+.lead { color: var(--ink-soft); margin-top: 0; }
+.card h2 { margin-top: 0; font-size: 1.3rem; }
+
+.card {
+  background: #fffaf0;
+  border: 1px solid var(--parchment-deep);
+  border-left: 4px solid var(--moss);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+
+.status { list-style: none; padding: 0; margin: 0; }
+.status li { padding: 6px 0; border-bottom: 1px solid var(--parchment-deep); }
+.status li:last-child { border-bottom: 0; }
+.ok { color: var(--forest); font-weight: 600; }
+.bad { color: var(--danger); font-weight: 600; }
+
+button, .button {
+  min-height: var(--tap);
+  padding: 0 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--walnut);
+  background: var(--walnut);
+  color: #fffaf0;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.quiet { background: transparent; color: var(--walnut); }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.artwork-slot { width: 72px; height: 72px; flex: none; }
+
+.notice { color: var(--danger); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
