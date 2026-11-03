@@ -5,6 +5,7 @@ A private Android app for the Keeper: hold the button, talk, and Nesthallow answ
 ```
 android/   Kotlin + Jetpack Compose app
 backend/   Vercel functions: holds the AI keys and Nesthallow's persona
+web/       Grove Naturalist: the field journal web app (its own Vercel project, see web/README.md)
 .github/   GitHub Actions: builds a signed APK on every push
 ```
 
